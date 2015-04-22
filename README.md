@@ -3,20 +3,8 @@ Testing Docker
 
 To use a local volume use:
 
-sudo docker run -i -p 8000:8000 -v ~/Documents/test:/apps/nodeapp/test/ -t nodeapp /bin/bash
+sudo docker run -i -p 8000:8000 -v ~/Documents/test:/apps/nodeapp/ -t nodeapp /bin/bash
 
-Place node app i.e. app.js in local dir ~/Documents/test:/apps/nodeapp/test/
-
-=========================================================
-
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World!\n');
-}).listen(8000);
-console.log('Server running at port 8000/');
-
-
-=========================================================
+Place Node app i.e. app.js in local dir ~/Documents/test:/apps/nodeapp/
 
 The local files will be available from the container
